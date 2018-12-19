@@ -1,0 +1,54 @@
+.wrap-product {
+    display: inline-block;
+    width: 554px;
+    vertical-align: middle;
+    position: relative;
+  }
+  
+  .wrap-product > .buttons {
+    position: absolute;
+    bottom: 0;
+    transform: translateY(calc(100% + 40px));
+  }
+  @media (max-width:1320px) {
+    .wrap-product {
+      width: 50%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  
+    }
+  
+    .wrap-product > .buttons {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(calc(100% + 8px));
+  
+    }
+  }
+  @media (max-width:1192px) {
+    .description-product > .text {
+      font-size: 16px;
+      line-height: 30px;
+      margin-bottom: 15px;
+    }
+  
+  }
+  @media (max-width:942px) {
+    .wrap-product {
+      width: 90%;
+  
+    }
+  
+    .wrap-product > .buttons {
+      width: 100%;
+  
+    }
+  }
+  @media (max-width:540px) {
+    .wrap-product > .buttons {
+      width: 100%;
+      position: relative;
+      bottom: 90px;
+    }
+  }
