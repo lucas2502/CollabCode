@@ -74,10 +74,13 @@
   }
   @media (max-width:1320px) {
     .description-product {
-      padding-top: 3vh;
+      width: 50%;
+      min-width: 655px;
+      margin: 0 auto 60px;
   
     }
   
+    
     .description-product > .item.-last {
       margin-bottom: 30px;
   
@@ -97,4 +100,9 @@
        font-size: 30px;
      }
   }
-  
+  @media (max-width: 720px){
+    .description-product{
+      width: 90%;
+      min-width: auto;
+    }
+  }
