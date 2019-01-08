@@ -13,17 +13,27 @@
     height: auto;
     max-width: 547px;
   }
-  @media (max-width:1320px) {
+  @media (max-width:1325px) {
   
     .photo-product {
-      display: block;
-      width: 100%;
-      border-radius: 0;
+      margin-right: 140px;
       text-align: center;
     }
   }
-  @media (max-width:525px) {
+
+  @media (max-width: 1310px){
+    .photo-product{
+      display: block;
+      margin-right: 0px;
+      border-radius: 0px;
+      margin-bottom: 30px;
+    }
+  }
+  @media (max-width:560px) {
     .photo-product{
       height: auto;
+    }
+    .photo-product > .photo{
+      width: 100%;
     }
   }

@@ -1,6 +1,9 @@
+:root{
+  --color-white: #fff;
+}
 .description-product {
     font-family: "Roboto", sans-serif;
-    color: #fff;
+    color: var(--color-white);
   }
   
   .description-product > .title {
@@ -79,8 +82,8 @@
       margin: 0 auto 60px;
   
     }
-  
-    
+   
+
     .description-product > .item.-last {
       margin-bottom: 30px;
   
@@ -95,14 +98,20 @@
       float: left;
       margin-right: 4px;
     }
-     .description-product > .title{
+    .description-product > .title{
        text-align: center;
        font-size: 30px;
+       margin-top: 5px;
      }
   }
   @media (max-width: 720px){
     .description-product{
       width: 90%;
       min-width: auto;
+    }
+
+    .description-product > .title{
+      
+      margin-top: 5px;
     }
   }
