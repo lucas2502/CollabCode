@@ -30,6 +30,10 @@
     margin-bottom: 28px;
   }
   
+  .desciption-product > .item .-active{
+    background-color: #fff;
+  }
+
   .description-product > .item.-info {
     width: 200px;
     text-align: right;
