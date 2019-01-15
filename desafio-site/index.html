@@ -27,7 +27,7 @@
         <h1 class="title">Logo</h1>
 
         <nav class="navigation">
-        <input type="search" placeholder="Buscar" name="buscar"  aria-label="Buscar" >
+        <input  type="search" placeholder="Buscar" name="buscar"  aria-label="Buscar" >
           <div class="box"><a class="action" href="http://collabcode.training">Produtos</a></div>
           <div class="box"><a class="action" href="http://collabcode.training">Serviços</a></div>
           <div class="box"><a class="action -last" href="http://collabcode.training">Carrinho (0)</a></div>
@@ -42,34 +42,56 @@
       <section class="wrap-product">
         <dl class="description-product">
           <dt class="title">Fone top, feliz e caro</dt>
-          <figure class="-heart">
-            <img src="img/heart.png" alt="Coração">
-          </figure>
-          <div class="cont-star">
+          <dd class="item -heart">
+            <img class="icon" src="img/heart.png" alt="Like" />
+            <img class="icon -active" src="img/heart-active.png" alt="Like" />
+          </dd>
+
+          <dd class="item -star">
             <ol>
               <li class="star">
-                <img class="icon" src="img/star.png" alt="Estrela" >
-                <img class="icon -active" src="img/star-full.png" alt="Estrela" >
-              </li>
-              <li class="star" >
-                  <img class="icon" src="img/star.png" alt="Estrela" >
-                  <img class="icon -active" src="img/star-full.png" alt="Estrela" >
-              </li>
-              <li class="star">
-                  <img class="icon" src="img/star.png" alt="Estrela" >
-                  <img class="icon -active" src="img/star-full.png" alt="Estrela" >
+                <img class="icon" src="img/star.png" alt="Estrela" />
+                <img
+                  class="icon -active"
+                  src="img/star-full.png"
+                  alt="Estrela"
+                />
               </li>
               <li class="star">
-                  <img class="icon" src="img/star.png" alt="Estrela" >
-                  <img class="icon -active" src="img/star-full.png" alt="Estrela" >
+                <img class="icon" src="img/star.png" alt="Estrela" />
+                <img
+                  class="icon -active"
+                  src="img/star-full.png"
+                  alt="Estrela"
+                />
               </li>
               <li class="star">
-                  <img class="icon" src="img/star.png" alt="Estrela" >
-                  <img class="icon -active" src="img/star-full.png" alt="Estrela" >
-              </li>  
+                <img class="icon" src="img/star.png" alt="Estrela" />
+                <img
+                  class="icon -active"
+                  src="img/star-full.png"
+                  alt="Estrela"
+                />
+              </li>
+              <li class="star">
+                <img class="icon" src="img/star.png" alt="Estrela" />
+                <img
+                  class="icon -active"
+                  src="img/star-full.png"
+                  alt="Estrela"
+                />
+              </li>
+              <li class="star">
+                <img class="icon" src="img/star.png" alt="Estrela" />
+                <img
+                  class="icon -active"
+                  src="img/star-full.png"
+                  alt="Estrela"
+                />
+              </li>
             </ol>
-          </div>
-          <dd class="item">4.0 (97)</dd>
+          </dd>
+          <dd class="item -contStar">0.0 (0)</dd>
           <dd class="item -info">
             <strong class="contrast">Frete</strong> C$ 108
           </dd>
@@ -92,6 +114,7 @@
       </div>
     </div>
     </section>
+    <script src="js/header-store.js"></script>
     <script src="js/description-product.js"></script>
     <script src="js/button-store.js"></script>
   </body>

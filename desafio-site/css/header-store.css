@@ -65,10 +65,12 @@
     border-bottom: 1px solid #fff;
     width: 358px;
     margin-right: 65px;
-    color: #fff;
+    color: inherit;
     font-size: 20px;
     font-family: Arial, 'Roboto', sans-serif;
     padding: 8px;
+    margin-right: 65px;
+    vertical-align: bottom;
   
   }
   
@@ -106,10 +108,21 @@
   @media (max-width:955px) {
     .header-store {
       padding-left: 30px;
+      padding-right: 30px;
     }
   
-    .header-store input[type="search"] {
-      display: none;
+    .header-store  [type="search"] {
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-88%);
+      background-color: #fff !important;
+      color:#000;
+      transition: transform 200ms linear;
+    }
+    .header.store .-active[type="search"]{
+      transition: 600ms cubic-bezier(0, 0, 0.96, 1.26);
+      transform: translateX(0);
     }
   
   }

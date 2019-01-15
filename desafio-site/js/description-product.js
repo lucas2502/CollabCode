@@ -1,51 +1,65 @@
-    const $heart = document.querySelector(".-heart");
-    const $stars= document.querySelectorAll(".star");
-    const positionLast = $stars.length - 1;
+const $heart = document.querySelector(".-heart");
+const $stars = document.querySelectorAll(".star");
 
-    $heart.addEventListener("click", handlelClick);
 
-    $stars.forEach(function($star, $key){
-        if(key ==0){
-            $star.addEventListener("click", firstStar);
-        }
 
-        if(key == positionLast){
-            $star.addEventListener("click", lastStar);
-        }
+const positionLast = $stars.length - 1;
 
-        else{
-            $star.addEventListener("click", function(){
-                middleStar(ket);
-            });
-        }
+$heart.addEventListener("click", handleClick);
+
+function handleClick() {
+  this.classList.toggle("-active");
+}
+
+
+
+$stars.forEach(function($star, key) {
+  if (key == 0) {
+    $star.addEventListener("click", firstStar);
+    $star.addEventListener("click", contStar(key));
+  }
+
+  if (key == positionLast) {
+    $star.addEventListener("click", function(){
+        lastStar();
+        contStar(key);
     });
-
-    function middleStar(index){
-        $stars.forEach(function($star, key){
-            $star.classList.remove("-active");
-
-            if( key <= index){
-                $star.classList.add("-active");
-            }
-        });
-    }
-
-    function firstStar(){
-        $stars.forEach(function($star){
-            $star.classList.remove("-active");
-        });
-
-        this.classList.add("-active");
-    }
-
-    function lastStar(){
-        $stars.forEach(function($star){
-            $star.classList.add("-active");
-        });
-    }
-
-    function handlelClick(){
-        this.classList.toggle("-active");
-    }
     
+  }
 
+  if (key > 0 && key < positionLast) {
+    $star.addEventListener("click", function() {
+      middleStar(key);
+      contStar(key);
+    });
+  } 
+});
+
+function firstStar() {
+  $stars.forEach(function($star) {
+    $star.classList.remove("-active");
+  });
+  this.classList.add("-active");
+}
+
+function lastStar() {
+  $stars.forEach(function($star) {
+    $star.classList.add("-active");
+  });
+}
+
+function middleStar(index) {
+  $stars.forEach(function($star, key) {
+    $star.classList.remove("-active");
+
+    if (key <= index) {
+      $star.classList.add("-active");
+    }
+  });
+}
+
+function contStar(cont){
+    cont ++;
+    const $contStars = document.querySelector(".-contStar");
+    $contStars.textContent = cont + ".0" + " " + "(" + (cont * 20) + ")";  
+}
