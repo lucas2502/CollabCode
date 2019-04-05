@@ -9,6 +9,10 @@ const labelCollabcode = (() => {
             .label-collabcode {
                 color: #3a4042;
                 font-size: 16px;
+                display: flex;
+                aling-content: space-between;
+                padding-left: 35px;
+                margin-top: 29px;
             }
         `;
 

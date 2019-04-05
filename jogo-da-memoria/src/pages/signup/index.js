@@ -12,6 +12,9 @@
     const $inputCollabcodeEmail = inputCollabcode.render("example@email.com", "email");
     const $labelCollabcodePass = labelCollabcode.render("Password");
     const $inputCollabcodePass = inputCollabcode.render("", "password", "pwd");
+    const $labelCollabcodePassConfirm = labelCollabcode.render("Confirm Password");
+    const $inputCollabcodePassConfirm = inputCollabcode.render("", "password", "pwd");
+    const $botButton = botButton.render("SUBMIT");
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $singupButton);
@@ -22,5 +25,8 @@
     $root.insertAdjacentHTML("beforeend", $inputCollabcodeEmail);
     $root.insertAdjacentHTML("beforeend", $labelCollabcodePass);
     $root.insertAdjacentHTML("beforeend", $inputCollabcodePass);
+    $root.insertAdjacentHTML("beforeend", $labelCollabcodePassConfirm);
+    $root.insertAdjacentHTML("beforeend", $inputCollabcodePassConfirm);
+    $root.insertAdjacentHTML("beforeend", $botButton);
     
 })();
