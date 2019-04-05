@@ -1,0 +1,35 @@
+const inputCollabcode = (() => {
+    const module = {};
+
+    module._style = () => {
+        const $head = document.querySelector("head");
+        const $style = document.createElement("style");
+
+        $style.textContent = `
+        
+        .input-collabcode {
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid rgb(85, 64, 66, 0.5);
+            padding-top: 12px;
+            padding-bottom: 10px;
+        }
+        
+        `;
+
+        $head.insertAdjacentElement("beforeend", $style);
+    };
+
+    module.render = (content, typeName, name) => {
+        module._style();
+
+            return`
+            <input class="input-collabcode" type="${typeName}" name="${name}" placeholder="${content}"/>  
+        `;
+    };
+
+    return {
+        render: module.render
+    }
+
+})();
