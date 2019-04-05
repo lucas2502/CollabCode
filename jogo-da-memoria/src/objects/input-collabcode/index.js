@@ -7,6 +7,7 @@ const inputCollabcode = (() => {
 
         $style.textContent = `
         .input-collabcode {
+            width: 80vw;
             font-size: 18px;
             font-weight: bold;
             border-bottom: 1px solid rgb(85, 64, 66, 0.5) ;

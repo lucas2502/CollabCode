@@ -9,7 +9,7 @@ const botButton = (() => {
             .buttonBot{
                 background-color: #f25a70;
                 color: #fff;
-                width: 302px;
+                width: 80vw;
                 height: 48px;
                 border-radius: 24px;
                 margin: 45px 35px 36px 35px;
@@ -18,7 +18,7 @@ const botButton = (() => {
             .buttonBot:hover {
                 background-color: #fff;
                 color: #f25a70;
-                border-color: #f25a70;
+                border: solid 1px #f25a70 ;
             }
         `;
 
