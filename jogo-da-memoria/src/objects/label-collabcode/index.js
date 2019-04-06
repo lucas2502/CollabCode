@@ -11,7 +11,6 @@ const labelCollabcode = (() => {
                 font-size: 16px;
                 display: flex;
                 aling-content: space-between;
-                padding-left: 35px;
                 margin-top: 29px;
             }
         `;
