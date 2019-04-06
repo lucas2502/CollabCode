@@ -6,12 +6,11 @@
     const $imgLogo = logoLogin.render();
     const $titleCollabcode = titleCollabcode.render("Hello!!");
     const $logoWrapper = logoWrapper.render($imgLogo, $titleCollabcode);
-    const $botButton = botButton.render("LOGIN");
+    const $formLogin = formLogin.render()
 
     $root.insertAdjacentHTML("beforeend", $loginButton);
     $root.insertAdjacentHTML("beforeend", $singupButton);
     $root.insertAdjacentHTML("beforeend", $logoWrapper);
-    
-    $root.insertAdjacentHTML("beforeend", $botButton);
+    $root.insertAdjacentHTML("beforeend", $formLogin);
 
 })();

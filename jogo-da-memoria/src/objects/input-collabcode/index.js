@@ -13,7 +13,6 @@ const inputCollabcode = (() => {
             border-bottom: 1px solid rgb(85, 64, 66, 0.5) ;
             padding-top: 12px;
             padding-bottom: 5px;
-            margin-left: 35px;
             opacity: 0.5;
             display: flex;
             aling-content: space-between;
