@@ -26,6 +26,7 @@ const formLogin = (()=>{
         const $inputCollabcodeEmail = inputCollabcode.render("example@email.com", "email");
         const $labelCollabcodePass = labelCollabcode.render("Password");
         const $inputCollabcodePass = inputCollabcode.render("", "password", "pwd");
+        const $linkCollab = linkCollab.render({href: "#", content: "Forget password?"});
         const $btn = botButton.render("SUBMIT");
     
         return `
@@ -35,7 +36,9 @@ const formLogin = (()=>{
 
             ${$labelCollabcodePass}
             ${$inputCollabcodePass}
-
+            
+            ${$linkCollab}
+            
             ${$btn}
         `
     };
