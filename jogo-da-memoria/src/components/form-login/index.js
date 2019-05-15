@@ -25,8 +25,11 @@ const formLogin = (()=>{
         const $labelCollabcodeEmail = labelCollabcode.render("E-mail");
         const $inputCollabcodeEmail = inputCollabcode.render("example@email.com", "email");
         const $labelCollabcodePass = labelCollabcode.render("Password");
-        const $inputCollabcodePass = inputCollabcode.render("", "password", "pwd");
-        const $eyeCollabcode = eyeCollabcode.render();
+        const $inputCollabcodePass = inputCollabcode.render({
+            id: "password", 
+            placeholder: "********", 
+            type: "pwd"});
+        const $eyeCollabcode = eyeCollabcode.render({attrFor: "password"});
         const $linkCollab = linkCollab.render({href: "#form>.sing-up", content: "Forget password?"});
         const $btn = botButton.render("SUBMIT");
     

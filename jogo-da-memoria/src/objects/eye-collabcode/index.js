@@ -20,18 +20,21 @@ const eyeCollabcode = (() => {
         $head.insertAdjacentElement("beforeend", $style)
     };
 
-    module._handleClick = () => {
-        console.log('Ae!')
+    module._handleClick = function () {
+        const attrFor = this.getAttribute("for");
+        const $input = document.querySelector(`#${attrFor}`);
+
+        $input.setAttribute("type", "text")
     }
 
-    module.render = () => {
+    module.render = ({ attrFor = ""}) => {
         module._style();
 
         return `
             <label
-                for="password" 
+                for="${attrFor}" 
                 class="eye-collabcode" 
-                onClick="eyeCollabcode.handleClick()"
+                onClick="eyeCollabcode.handleClick.bind(this)()"
             >Show password</label>
         `;
 
