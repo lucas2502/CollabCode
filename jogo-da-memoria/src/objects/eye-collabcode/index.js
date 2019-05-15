@@ -3,7 +3,7 @@ const eyeCollabcode = (() => {
 
     module._style = () => {
         const $head = document.querySelector("head");
-        const $style = document.createElemente("style");
+        const $style = document.createElement("style");
 
         $style.textContent = `
         
