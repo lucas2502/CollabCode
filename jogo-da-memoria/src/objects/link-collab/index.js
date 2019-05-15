@@ -15,6 +15,10 @@ const linkCollab = (() => {
                 margin-bottom: 60px;
                 display: block;
                 text-align: right;
+                margin-right: 40px;
+            }
+            .link-collab:hover{
+                color: #f25a70;
             }
         `
 

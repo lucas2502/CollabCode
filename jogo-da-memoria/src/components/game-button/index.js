@@ -36,7 +36,7 @@ const gameButton = (()=>{
         module._style();
         
         return `
-            <button class="game-button"  >${content}</button>
+            <button class="game-button" href="./../" >${content}</button>
         `
     };
 
