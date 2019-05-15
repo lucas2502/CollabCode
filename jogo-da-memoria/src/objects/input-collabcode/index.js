@@ -24,11 +24,16 @@ const inputCollabcode = (() => {
         $head.insertAdjacentElement("beforeend", $style);
     };
 
-    module.render = (content, typeName, name) => {
+    module.render = (id = "",placeholder = "", type = "password") => {
         module._style();
 
             return`
-            <input class="input-collabcode" type="${typeName}" name="${name}" placeholder="${content}"/>  
+                <input
+                    id="${id}" 
+                    class="input-collabcode" 
+                    type="${type}"  
+                    placeholder="${placeholder}"
+                />  
         `;
     };
 
