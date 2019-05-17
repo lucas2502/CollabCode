@@ -24,7 +24,7 @@ const inputCollabcode = (() => {
         $head.insertAdjacentElement("beforeend", $style);
     };
 
-    module.render = (id = "",placeholder = "", type = "password") => {
+    module.render = (id = "",placeholder = "", type = "") => {
         module._style();
 
             return`

@@ -7,7 +7,8 @@ const eyeCollabcode = (() => {
 
         $style.textContent = `
             .eye-collabcode {
-                background-image: url(/img/eye.png) no-repeat;
+                background-image: url(/img/hidden.svg); 
+                background-repeat: no-repeat;
                 background-position: center;
                 display: block;
                 text-indent: -999px;
@@ -24,7 +25,10 @@ const eyeCollabcode = (() => {
         const attrFor = this.getAttribute("for");
         const $input = document.querySelector(`#${attrFor}`);
 
-        $input.setAttribute("type", "text")
+        $input.getAttribute("type") === "text" ? 
+            $input.setAttribute("type", "password"): 
+            $input.setAttribute("type", "text");
+        
     }
 
     module.render = ({ attrFor = ""}) => {
@@ -43,7 +47,7 @@ const eyeCollabcode = (() => {
 
     return {
         render: module.render,
-        handleClick: module._handleClick
+        handleClick: module.handleClick
     }
 
 })();
