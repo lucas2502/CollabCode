@@ -35,7 +35,9 @@ const formLogin = (()=>{
             type: "password"});
         const $eyeCollabcode = eyeCollabcode.render({attrFor: "password"});
         const $linkCollab = linkCollab.render({href: "#form>.sing-up", content: "Forget password?"});
-        const $btn = botButton.render("SUBMIT");
+        const $btn = botButton.render({
+            content: "SUBMIT",
+            path: "game"});
     
         return `
             ${$labelCollabcodeEmail}    

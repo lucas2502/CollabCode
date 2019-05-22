@@ -45,7 +45,9 @@ const formSingup = (()=>{
             placeholder:"********", 
             type:"text"});
 
-        const $btn = botButton.render("SUBMIT");
+        const $btn = botButton.render({
+            content: "SUBMIT",
+            path: "login"});
     
         return `
             ${$labelCollabcodeUsername}

@@ -23,16 +23,23 @@ const botButton = (() => {
 
         $head.insertAdjacentElement("beforeend", $style);
     };
-
-    module.render = (content) => {
+    module.handleClick = (event, path) => {
+        event.preventDefault();
+        window.locantion.hash = `#/${path}`;
+    }
+    module.render = ({content = "", path = ""}) => {
         module._style();
 
         return `
-            <button class="btnBot">${content}</button>
+            <button 
+                class="btnBot"
+                onClick="BotButton.handleClick(event, '${path}')"
+                >${content}</button>
         `;
     }
 
     return {
-        render: module.render
+        render: module.render,
+        handleClick: module.handleClick
     }
 })();
