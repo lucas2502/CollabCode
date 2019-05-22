@@ -48,7 +48,7 @@ const eyeCollabcode = (() => {
             <label
                 for="${attrFor}" 
                 class="eye-collabcode" 
-                onClick={() => eyeCollabcode.handleClick()}
+                onClick="{() => eyeCollabcode.handleClick()}"
             >Show password</label>
         `;
 
