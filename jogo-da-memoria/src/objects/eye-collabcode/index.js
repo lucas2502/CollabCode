@@ -7,7 +7,7 @@ const eyeCollabcode = (() => {
 
         $style.textContent = `
             .eye-collabcode {
-                background-image: url(/img/hidden.svg); 
+                background-image: url(/img/eye.png); 
                 background-repeat: no-repeat;
                 background-position: center;
                 display: block;
@@ -15,6 +15,10 @@ const eyeCollabcode = (() => {
                 width: 24px;
                 height: 15px;
                 cursor: pointer;
+                opacity: 0.5;
+            }
+            .eye-collabcode.-active {
+                opacity:1;
             }
         `;
 
@@ -25,10 +29,13 @@ const eyeCollabcode = (() => {
         const attrFor = this.getAttribute("for");
         const $input = document.querySelector(`#${attrFor}`);
 
-        $input.getAttribute("type") === "text" ? 
-            $input.setAttribute("type", "password"): 
-            $input.setAttribute("type", "text");
-        
+        if($input.getAttribute("type") === "text"){
+            $input.classList.remove("-active") 
+            $input.setAttribute("type", "password")   
+        }else{
+            $input.classList.add("-active")
+            $input.setAttribute("type", "text")
+        }
     }
 
     module.render = ({ attrFor = ""}) => {
@@ -38,7 +45,7 @@ const eyeCollabcode = (() => {
             <label
                 for="${attrFor}" 
                 class="eye-collabcode" 
-                onClick="eyeCollabcode.handleClick.bind(this)()"
+                onClick={() => eyeCollabcode.handleClick()}
             >Show password</label>
         `;
 
