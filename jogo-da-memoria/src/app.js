@@ -2,10 +2,11 @@
     
     const { hash } = window.location;
 
-    if ( hash === "#/singup"){
-        singup()
-    }else{
-        login();
-    }
+    const paths = [];
+    paths[""] = login;
+    paths["#/singup"] = singup;
+    paths["#/game"] = game;
+
+    paths[hash]();
     
 })();
