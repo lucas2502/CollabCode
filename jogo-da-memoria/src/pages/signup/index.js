@@ -1,4 +1,4 @@
-const singup = (()=> {
+const singup = (() => {
     const $root = document.querySelector("#root");
 
     const $loginButton = flatButton.render('Log in', false, "login");
