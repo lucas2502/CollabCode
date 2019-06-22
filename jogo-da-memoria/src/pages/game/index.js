@@ -6,7 +6,10 @@ const game = (() => {
     const $layerStart = layerStart.render("START");
 
     const $pointBar = pointBar.create();
-
+    /*const $exitButton = exitButton.render({
+        content: "Login",
+        path: "game"
+    });*/
 
 
     const $memoryCardGaio = createMemoryCard({    
@@ -93,7 +96,8 @@ const game = (() => {
         $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardCabeca);
         $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardCabeca);   
         */
-    $root.insertAdjacentHTML("afterbegin", $pointBar);    
+    $root.insertAdjacentHTML("afterbegin", $pointBar);
+    //$root.insertAdjacentHTML("beforeend", $exitButton);    
     $root.insertAdjacentElement("beforeend", $cardsWrapper);
     $root.insertAdjacentHTML("beforeend", $layerStart);
 

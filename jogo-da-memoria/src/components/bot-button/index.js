@@ -23,11 +23,13 @@ const botButton = (() => {
 
         $head.insertAdjacentElement("beforeend", $style);
     };
+    
     module.handleClick = (event, path) => {
         event.preventDefault();
         location.hash = `#/${path}`;
         location.reload();
     }
+
     module.render = ({content = "", path = ""}) => {
         module._style();
 
@@ -37,7 +39,7 @@ const botButton = (() => {
                 type="submit"
                 value=${content}
                 onClick="botButton.handleClick(event, '${path}')"
-                />
+            />
         `;
     }
 
