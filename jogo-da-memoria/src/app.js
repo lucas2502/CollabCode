@@ -11,4 +11,4 @@
 
     paths[hash] === undefined ? paths["#/404"]() : paths[hash]()
     
-})();
+})(); 

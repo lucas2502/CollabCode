@@ -28,15 +28,21 @@ const formLogin = (()=>{
             placeholder:"example@email.com",
             type: "email" 
             });
-        const $labelCollabcodePass = labelCollabcode.render("Password");
+        
+            const $labelCollabcodePass = labelCollabcode.render("Password");
+        
         const $inputCollabcodePass = inputCollabcode.render({
             id: "password", 
             placeholder: "********", 
             type: "password"});
-        const $eyeCollabcode = eyeCollabcode.render({attrFor: "password"});
-        const $linkCollab = linkCollab.render({href: "#form>.sing-up", content: "Forget password?"});
+        
+            const $eyeCollabcode = eyeCollabcode.render({attrFor: "password"});
+        
+        const $linkCollab = linkCollab.render({
+            href: "#", 
+            content: "Forget password?"});
         const $btn = botButton.render({
-            content: "SUBMIT",
+            content: "Login",
             path: "game"});
     
         return `

@@ -25,16 +25,19 @@ const botButton = (() => {
     };
     module.handleClick = (event, path) => {
         event.preventDefault();
-        window.locantion.hash = `#/${path}`;
+        location.hash = `#/${path}`;
+        location.reload();
     }
     module.render = ({content = "", path = ""}) => {
         module._style();
 
         return `
-            <button 
+            <input
                 class="btnBot"
+                type="submit"
+                value=${content}
                 onClick="BotButton.handleClick(event, '${path}')"
-                >${content}</button>
+                />
         `;
     }
 
