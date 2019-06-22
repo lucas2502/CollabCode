@@ -36,7 +36,7 @@ const botButton = (() => {
                 class="btnBot"
                 type="submit"
                 value=${content}
-                onClick="BotButton.handleClick(event, '${path}')"
+                onClick="botButton.handleClick(event, '${path}')"
                 />
         `;
     }

@@ -41,6 +41,7 @@ const formLogin = (()=>{
         const $linkCollab = linkCollab.render({
             href: "#", 
             content: "Forget password?"});
+        
         const $btn = botButton.render({
             content: "Login",
             path: "game"});
