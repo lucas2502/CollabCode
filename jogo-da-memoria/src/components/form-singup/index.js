@@ -24,18 +24,30 @@ const formSingup = (()=>{
     module._children = () => {
         
         const $labelCollabcodeUsername = labelCollabcode.render("Username");
-        const $inputCollabcodeUsername = inputCollabcode.render("You Username", "text");
+        const $inputCollabcodeUsername = inputCollabcode.render({
+            placeholder:"You Username", 
+            type:"text"});
 
         const $labelCollabcodeEmail = labelCollabcode.render("E-mail");
-        const $inputCollabcodeEmail = inputCollabcode.render("example@email.com", "email");
+        const $inputCollabcodeEmail = inputCollabcode.render({
+            placeholder:"example@email.com", 
+            type:"email"});
 
         const $labelCollabcodePass = labelCollabcode.render("Password");
-        const $inputCollabcodePass = inputCollabcode.render("", "password", "pwd");
+        const $inputCollabcodePass = inputCollabcode.render({
+            id: "", 
+            placeholder:"********", 
+            type:"text"});
 
         const $labelCollabcodePassConfirm = labelCollabcode.render("Confirm Password");
-        const $inputCollabcodePassConfirm = inputCollabcode.render("", "password", "pwd");
+        const $inputCollabcodePassConfirm = inputCollabcode.render({
+            id: "", 
+            placeholder:"********", 
+            type:"text"});
 
-        const $btn = botButton.render("SUBMIT");
+        const $btn = botButton.render({
+            content: "SUBMIT",
+            path: "login"});
     
         return `
             ${$labelCollabcodeUsername}

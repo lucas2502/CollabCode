@@ -7,13 +7,21 @@ const eyeCollabcode = (() => {
 
         $style.textContent = `
             .eye-collabcode {
-                background-image: url(/img/eye.png) no-repeat;
+                background-image: url(/img/eye.png); 
+                background-repeat: no-repeat;
                 background-position: center;
                 display: block;
                 text-indent: -999px;
                 width: 24px;
                 height: 15px;
                 cursor: pointer;
+                opacity: 0.5;
+                transition: opacity 200ms linear;
+                margin-left: auto;
+                transform: translateY(-140%);
+            }
+            .eye-collabcode.-active {
+                opacity:1;
             }
         `;
 
@@ -24,7 +32,13 @@ const eyeCollabcode = (() => {
         const attrFor = this.getAttribute("for");
         const $input = document.querySelector(`#${attrFor}`);
 
-        $input.setAttribute("type", "text")
+        if($input.getAttribute("type") === "text"){
+            $input.classList.remove("-active") 
+            $input.setAttribute("type", "password")   
+        }else{
+            $input.classList.add("-active")
+            $input.setAttribute("type", "text")
+        }
     }
 
     module.render = ({ attrFor = ""}) => {
@@ -34,7 +48,7 @@ const eyeCollabcode = (() => {
             <label
                 for="${attrFor}" 
                 class="eye-collabcode" 
-                onClick="eyeCollabcode.handleClick.bind(this)()"
+                onClick="{() => eyeCollabcode.handleClick()}"
             >Show password</label>
         `;
 
@@ -43,7 +57,7 @@ const eyeCollabcode = (() => {
 
     return {
         render: module.render,
-        handleClick: module._handleClick
+        handleClick: module.handleClick
     }
 
 })();

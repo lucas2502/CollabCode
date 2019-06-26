@@ -1,5 +1,17 @@
 const pointBar = (() => {
     const module = {};
+    
+    module._children = () => {
+        const $exitButton = exitButton.render({
+            content: "Login",
+            path: "game"
+        });
+
+        return `
+            ${$exitButton}
+        `
+    }
+    
 
     module._style = () => {
         const $head = document.querySelector("head");
@@ -27,6 +39,7 @@ const pointBar = (() => {
         return `
             <header class="point-bar">
                 <span class="number">0</span>
+                ${module._children()}
             </header>
         
         `

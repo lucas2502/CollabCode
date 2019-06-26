@@ -18,7 +18,7 @@ const layerStart = (() => {
         const $gameButton = gameButton.render(content);
 
         return `
-            <div class="layer-start" onClick="layerStart.handleClick(this)" onTransitionEnd="layerStart.handleTransitionEnd()">
+            <div class="layer-start" onClick="layerStart.handleClick(this)" onTransitionEnd="layerStart.handleTransitionEnd(event, this)">
                 ${$transparencyLayer}
                 ${$gameButton}
             </div>
