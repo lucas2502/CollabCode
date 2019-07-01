@@ -1,9 +1,11 @@
 import React from 'react';
-import './App.css';
+
+import Header from './components/Header'
 
 function App() {
   return (
-    <a href="#" className="action">Sobre</a>
+    <Header/>
+    
   );
 }
 
