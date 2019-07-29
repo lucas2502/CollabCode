@@ -1,0 +1,15 @@
+.header {
+    padding: 19px 35px;
+    display: flex;
+    justify-content: space-between;
+    
+}
+
+.header > .sobre {
+    margin-left: auto;
+    margin-right: 10px;
+}
+
+.header > .hamburguer{
+    width: 25px;
+}
